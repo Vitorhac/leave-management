@@ -1,10 +1,11 @@
 ﻿using leave_management.Data;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace leave_management.Contracts
 {
     public interface ILeaveRequestRepository : IRepositoryBase<LeaveRequest>
     {
-        ICollection<LeaveRequest> GetLeaveRequestsByEmployee(string employeeid);
+        Task<ICollection<LeaveRequest>> GetLeaveRequestsByEmployee(string employeeid);
     }
 }
